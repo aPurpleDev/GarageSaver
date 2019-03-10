@@ -4,11 +4,11 @@ import java.io.Serializable;
 
 public abstract class Moteur implements Serializable {
 
-TypeMoteur type;
+protected TypeMoteur type;
 
-String cylindre;
+protected String cylindre;
 
-double prix;
+protected double prix;
 
 public abstract String toString();
 

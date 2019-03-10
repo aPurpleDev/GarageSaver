@@ -2,7 +2,7 @@ package fr.OCGarage.java;
 
 public class GPS implements Option {
 
-    double prix;
+    protected double prix;
 
     GPS(){
         prix = 113.5;

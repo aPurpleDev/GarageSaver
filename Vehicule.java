@@ -8,13 +8,13 @@ public abstract class Vehicule implements Option, Serializable {
 
 protected double prix;
 
-public static String nom;
+protected static String nom;
 
 protected List<Option> options;
 
 protected Marque nomMarque;
 
-public Moteur moteur;
+protected Moteur moteur;
 
 public abstract String toString();
 

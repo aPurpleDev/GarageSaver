@@ -25,7 +25,7 @@ Lagouna(double prix, String nom, List<Option> options, Marque nomMarque){ //Para
     @Override
     public String toString(){
 
-        String converted = "Nom : LAGOUNA" /*+ this.nom*/ + ", Marque :" + this.nomMarque + ", Prix :" + this.prix + " €, " + this.options + ". Pour un prix total de : " + (this.prix + this.getPrixOptions())  + " €.";
+        String converted = "Voiture : " + this.nomMarque + ", Nom : LAGOUNA, Prix :" + this.prix + " €, " + this.options + ". Pour un prix total de : " + (this.prix + this.getPrixOptions())  + " €.";
 
         return converted;
     }

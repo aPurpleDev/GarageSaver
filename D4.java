@@ -16,7 +16,7 @@ public class D4 extends Vehicule{
     @Override
     public String toString(){
 
-        String converted = "Nom : D4" + ", Marque :" + this.nomMarque + ", Prix :" + this.prix + " €, " + this.options+ ". Pour un prix total de : " + (this.prix + this.getPrixOptions())  + " €.";
+        String converted = "Voiture : " + this.nomMarque + ", Nom : D4, Prix :" + this.prix + " €, " + this.options+ ". Pour un prix total de : " + (this.prix + this.getPrixOptions())  + " €.";
 
         return converted;
     }

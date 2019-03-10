@@ -2,7 +2,7 @@ package fr.OCGarage.java;
 
 public class BarreDeToit implements Option {
 
-    double prix;
+    protected double prix;
 
     BarreDeToit(){
         prix = 29.9;

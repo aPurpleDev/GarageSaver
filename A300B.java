@@ -18,10 +18,10 @@ public class A300B extends Vehicule {
         this.moteur = moteur;
     }
 
-    @Override
+    @Override //de la méthode abstraite de la Classe Vehicule
     public String toString(){
 
-        String converted = "Nom : A300B" + ", Marque :" + this.nomMarque + ", Prix :" + this.prix + " €, " + this.options + ". Pour un prix total de : " + (this.prix + this.getPrixOptions()) + " €.";
+        String converted = "Voiture : " + this.nomMarque + ", Nom : A300B, Prix :" + this.prix + " €, " + this.options + ". Pour un prix total de : " + (this.prix + this.getPrixOptions()) + " €.";
 
         return converted;
     }
@@ -46,7 +46,7 @@ public class A300B extends Vehicule {
         return prix;
     }
 
-    @Override
+    @Override //de la méthode abstraite de l'interface Option, parcours l'ArrayList des options pour les chercher et additionner leur prix.
     public double getPrixOptions(){
 
         double prixoptions = 0;

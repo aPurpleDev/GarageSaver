@@ -8,7 +8,7 @@ import static fr.OCGarage.java.Vehicule.nom;
 
 public class Garage implements Serializable {
 
-    List<Vehicule> voitures;
+    protected List<Vehicule> voitures;
 
     Garage(){
 

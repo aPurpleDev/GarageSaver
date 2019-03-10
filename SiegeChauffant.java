@@ -2,7 +2,7 @@ package fr.OCGarage.java;
 
 public class SiegeChauffant implements Option{
 
-    double prix;
+    protected double prix;
 
     SiegeChauffant(){
 

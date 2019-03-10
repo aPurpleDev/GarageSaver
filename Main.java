@@ -8,27 +8,24 @@ public class Main {
 
         Garage garage = new Garage();
 
-        File carSaver = new File("carSave.txt");
-        ObjectInputStream carReaderA = null;
+        File carSaver = new File("carSave.txt"); //declaration du Fichier
+        ObjectInputStream carReaderA = null; //declaration du Stream de lecture
 
-        if(!carSaver.isFile()){
+        if(!carSaver.isFile()){ //condition en cas de ficher non-existant, pour le premier lancement
             System.out.println("AUCUNE VOITURE ENREGISTREE");
             System.out.println(garage);
         }else{
             try{
-                carReaderA = new ObjectInputStream(new FileInputStream(carSaver));
+                carReaderA = new ObjectInputStream(new FileInputStream(carSaver)); //Si une sauvegarde est présente, lecture
                 System.out.println(carReaderA.readObject());
+                carReaderA.close(); //fermeture du flux
             }catch(IOException | ClassNotFoundException e){
                 e.printStackTrace();
-            }/*finally{
-                try {
-                    carReaderA.close();
-                }catch(IOException e){
-                    e.printStackTrace();
-                }*/
             }
 
-        Vehicule lag1 = new Lagouna();
+            }
+
+        Vehicule lag1 = new Lagouna(); //Main de l'exercice
         lag1.setMoteur(new MoteurEssence("150 Chevaux", 10256d));
         lag1.addOption(new GPS());
         lag1.addOption(new SiegeChauffant());
@@ -68,26 +65,22 @@ public class Main {
         d4_2.addOption(new VitreElectrique());
         garage.addVoiture(d4_2);
 
-        ObjectOutputStream carSaveB = null;
-        // FileOutputStream carSaveF = null; -codeProtect
+        ObjectOutputStream carSaveB = null; //declaration du flux de sauvegarde
 
         try{
-            carSaveB = new ObjectOutputStream(new FileOutputStream(carSaver));
+            carSaveB = new ObjectOutputStream(new FileOutputStream(carSaver)); //initialisation et sauvegarde
         }catch(IOException e){
             e.printStackTrace();
         }
 
         try{
             carSaveB.writeObject(garage);
+            carSaveB.close(); //fermeture du flux de sauvegarde
         }catch(IOException e){
             e.printStackTrace();
-        }/*finally {
-            try {
-                carSaveB.close();
-                }catch(IOException e){
-                e.printStackTrace();
-            }
-            }*/
+        }
+
+
         }
 }
 

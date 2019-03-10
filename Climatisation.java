@@ -2,7 +2,7 @@ package fr.OCGarage.java;
 
 public class Climatisation implements Option {
 
-    double prix;
+    protected double prix;
 
     Climatisation(){
         prix = 347.3;

@@ -2,7 +2,7 @@ package fr.OCGarage.java;
 
 public class VitreElectrique implements Option{
 
-    public double prix;
+    private double prix;
 
     VitreElectrique(){
 
